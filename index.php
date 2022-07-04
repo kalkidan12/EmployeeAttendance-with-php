@@ -51,7 +51,8 @@
 											<label for="eno" class="control-label">Enter your Employee Number</label>
 											<input type="text" id="eno" name="eno" class="form-control col-sm-12">
 										</div>
-										<center class="button-popup hidden-xs" style="display: none;">
+										<center class="button-popup hidden-xs" >
+										<!-- style="display: none;" -->
 											<button type="button" class='btn btn-sm btn-success log_now col-sm-2 my-1' data-id="1">IN AM</button>
 											<button type="button" class='btn btn-sm btn-info log_now col-sm-2' data-id="2">OUT AM</button>
 											<button type="button" class='btn btn-sm btn-success log_now col-sm-2 my-1' data-id="3">IN PM</button>
@@ -69,14 +70,6 @@
 		</div>
 
 
-		<!-- <div class="contact-popup hidden-xs" style="display: none;">
-    <div class="need-help-wrapper">
-        <div class="need-help-header" onClick="gtag('event', 'Clicked Need Help', {'event_category': 'Contact'});">
-            Need Help?</div>
-        <div class="need-help-content"><span class="need-help-lines-open">Phone Lines Are Open!</span><span
-                class="need-help-phone-no">00000 000000</span></div>
-    </div>
-</div> -->
 	</body>
 	<script>
 		$(document).ready(function(){
