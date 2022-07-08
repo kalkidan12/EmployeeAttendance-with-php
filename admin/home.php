@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <?php
 	include 'auth.php';
+	include 'db_connect.php'
 ?>
 <html lang = "eng">
 	<head>
@@ -78,6 +79,7 @@
 			<div class = "alert alert-primary"><h5>Welcome <?php echo ucwords($user_name) ?> !</h5></div>
 			
 			</div>
+			
 			<!--  -->
 			<div class="container">
 				<div class="row">
@@ -85,7 +87,20 @@
 				<div class="col-md-3">
 				<div class="card-counter info">
 					<i class="fa fa-users"></i>
-					<span class="count-numbers">2+</span>
+					<?php 
+			
+						$employee = "SELECT * from users";
+						$employee_run = mysqli_query($conn, $employee);
+						if ($employee_total = mysqli_num_rows($employee_run)) {
+						
+							// Return the number of rows in result set
+							echo '<span class="count-numbers">'.$employee_total.'</span>';
+							// echo '<h1>'.$employee_total.'</h1>';
+							
+							
+						}
+					?>
+				
 					<span class="count-name">Users</span>
 				</div>
 				</div>
@@ -93,25 +108,42 @@
 				<div class="col-md-3">
 				<div class="card-counter primary">
 					<i class="fa fa-code-fork"></i>
-					<span class="count-numbers">12+</span>
-					<span class="count-name">Flowz</span>
+					<?php 
+			
+						$employee = "SELECT * from employee";
+						$employee_run = mysqli_query($conn, $employee);
+						if ($employee_total = mysqli_num_rows($employee_run)) {
+						
+							// Return the number of rows in result set
+							echo '<span class="count-numbers">'.$employee_total.'</span>';
+							// echo '<h1>'.$employee_total.'</h1>';
+							
+							
+						}
+					?>
+					<span class="count-name">Employee</span>
 				</div>
 				</div>
+				
 
 				<div class="col-md-3">
-				<div class="card-counter success">
+				 <a href='attendance.php'>
+					<div class="card-counter success">
 					<i class="fa fa-database"></i>
 					<span class="count-numbers">5+</span>
 					<span class="count-name">Attendance</span>
-				</div>
+					</div>
+				 </a>
 				</div>
 
+				
+				
 				<div class="col-md-3">
-				<div class="card-counter danger">
-					<i class="fa fa-ticket"></i>
-					<span class="count-numbers">1+</span>
-					<span class="count-name">Annual Report</span>
-				</div>
+					<div class="card-counter danger">
+						<i class="fa fa-ticket"></i>
+						<span class="count-numbers">1+</span>
+						<span class="count-name">Annual Report</span>
+					</div>
 				</div>
 
 				

@@ -1,6 +1,7 @@
 <?php
 	require_once 'db_connect.php';
-	extract($_POST);
+	 extract($_POST);
+	
 	$qry = $conn->query("SELECT * FROM users WHERE username = '$username' and  password = '$password'") or die(msqli_error());
 	$login = $qry->fetch_array();
 
