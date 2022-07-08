@@ -51,7 +51,7 @@
 											<label for="eno" class="control-label">Enter your Employee Number</label>
 											<input type="text" id="eno" name="eno" class="form-control col-sm-12">
 										</div>
-										<center class="button-popup hidden-xs" >
+										<center class="button-popup hidden-xs" style="display: none;">
 										<!-- style="display: none;" -->
 											<button type="button" class='btn btn-sm btn-success log_now col-sm-2 my-1' data-id="1">IN AM</button>
 											<button type="button" class='btn btn-sm btn-info log_now col-sm-2' data-id="2">OUT AM</button>
